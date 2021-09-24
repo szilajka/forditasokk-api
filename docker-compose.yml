@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  auth_server:
+    image: ${DOCKER_REGISTRY-}authserver
+    build:
+      context: .
+      dockerfile: src/AuthServer/Dockerfile
+    ports:
+      - 5000:443
+    depends_on:
+      - db
+    environment:
+        FORDITASOKKPGSQL: "Host=db;Port=5532;Database=forditasokk;Username=postgres;Password=postgres"
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - 5532:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
