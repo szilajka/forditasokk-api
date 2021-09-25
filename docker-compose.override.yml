@@ -6,7 +6,7 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=https://+:44330
       - ASPNETCORE__Kestrel__Certificates__Default__Password=forditasokkPwd
-      - ASPNETCORE__Kestrel__Certificates__Default__Path=/https/authServer.pfx
+      - ASPNETCORE__Kestrel__Certificates__Default__Path=/https/Forditasokk.Api.pfx
     ports:
       - "44330:44330"
     volumes:
