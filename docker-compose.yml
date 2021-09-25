@@ -1,17 +1,30 @@
-version: '3.9'
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
+
+version: "3.9"
 
 services:
+  forditasokkapi:
+    image: forditasokkapi
+    build:
+      context: .
+      dockerfile: src/Forditasokk.Api/Dockerfile
+    ports:
+      - 44330:44330
+    depends_on:
+      - db
+    environment:
+      FORDITASOKKPGSQL: "Host=db;Port=5432;Database=forditasokk;Username=postgres;Password=postgres"
   auth_server:
-    image: ${DOCKER_REGISTRY-}authserver
+    image: authserver
     build:
       context: .
       dockerfile: src/AuthServer/Dockerfile
     ports:
-      - 5000:443
+      - 44338:44338
     depends_on:
       - db
     environment:
-        FORDITASOKKPGSQL: "Host=db;Port=5532;Database=forditasokk;Username=postgres;Password=postgres"
+      CONNECTIONSTRINGS__IDENTITYPGSQL: "Host=db;Port=5432;Database=identity_auth;Username=postgres;Password=postgres"
   db:
     image: postgres
     restart: always

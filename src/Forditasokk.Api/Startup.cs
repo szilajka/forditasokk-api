@@ -46,7 +46,7 @@ namespace Forditasokk.Api
             {
                 options.IncludeErrorDetails = true;
                 //AuthServer url
-                options.Authority = "https://localhost:5000";
+                options.Authority = "https://localhost:44338";
                 options.TokenValidationParameters.ValidAudiences = new List<string>() { "" };
                 options.RequireHttpsMetadata = false;
                 options.SaveToken = true;
@@ -76,6 +76,10 @@ namespace Forditasokk.Api
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Forditasokk.Api v1"));
+            }
+            else
+            {
+                app.UseHsts();
             }
 
             app.UseHttpsRedirection();

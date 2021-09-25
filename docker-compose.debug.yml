@@ -1,0 +1,48 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
+
+version: "3.9"
+
+services:
+  forditasokkapi:
+    image: forditasokkapi
+    build:
+      context: .
+      dockerfile: src/Forditasokk.Api/Dockerfile
+    ports:
+      - "44330:44330"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS="https://+44330"
+      - ASPNETCORE_HTTPS_PORT=44330
+      - ASPNETCORE__Kestrel__Certificates__Default__Password=forditasokkPwd
+      - ASPNETCORE__Kestrel__Certificates__Default__Path=/https/authServer.pfx
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw
+      - ${APPDATA}\microsoft\UserSecrets\:/root/.microsoft/usersecrets:ro
+      - ${USERPROFILE}\.aspnet\https:/root/.aspnet/https/:ro
+  auth_server:
+    image: authserver
+    build:
+      context: .
+      dockerfile: src/AuthServer/Dockerfile
+    ports:
+      - "44338:44338"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS="https://+44338"
+      - ASPNETCORE_HTTPS_PORT=44338
+      - ASPNETCORE__Kestrel__Certificates__Default__Password=forditasokkPwd
+      - ASPNETCORE__Kestrel__Certificates__Default__Path=/https/authServer.pfx
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw
+      - ${APPDATA}\microsoft\UserSecrets\:/root/.microsoft/usersecrets:ro
+      - ${USERPROFILE}\.aspnet\https:/root/.aspnet/https/:ro
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - 5532:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres

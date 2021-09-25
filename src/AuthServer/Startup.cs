@@ -2,18 +2,12 @@ using AuthServer.Data;
 using AuthServer.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Quartz;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using static OpenIddict.Abstractions.OpenIddictConstants;
 
 namespace AuthServer
@@ -32,7 +26,7 @@ namespace AuthServer
         {
             services.AddDbContext<ApplicationDbContext>(options =>
             {
-                options.UseNpgsql(Configuration.GetConnectionString("ForditasokkPgsql"));
+                options.UseNpgsql(Configuration.GetConnectionString("IdentityPgsql"));
 
                 // Register the entity sets needed by OpenIddict.
                 // Note: use the generic overload if you need
