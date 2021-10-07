@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace Forditasokk.Data.Forditasokk.Data.Data.Migrations
+namespace Forditasokk.Data.Data.Migrations
 {
     public partial class InitDb : Migration
     {

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace Forditasokk.Data.Forditasokk.Data.Data.Migrations
+namespace Forditasokk.Data.Data.Migrations
 {
     [DbContext(typeof(ForditasokkDbContext))]
     partial class ForditasokkDbContextModelSnapshot : ModelSnapshot

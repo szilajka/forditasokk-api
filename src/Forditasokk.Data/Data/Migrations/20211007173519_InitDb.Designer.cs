@@ -7,10 +7,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace Forditasokk.Data.Forditasokk.Data.Data.Migrations
+namespace Forditasokk.Data.Data.Migrations
 {
     [DbContext(typeof(ForditasokkDbContext))]
-    [Migration("20211007173003_InitDb")]
+    [Migration("20211007173519_InitDb")]
     partial class InitDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
