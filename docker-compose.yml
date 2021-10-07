@@ -13,7 +13,7 @@ services:
     depends_on:
       - db
     environment:
-      FORDITASOKKPGSQL: "Host=db;Port=5432;Database=forditasokk;Username=postgres;Password=postgres"
+      CONNECTIONSTRINGS__FORDITASOKKPGSQL: "Host=db;Port=5432;Database=forditasokk;Username=postgres;Password=postgres"
   auth_server:
     image: authserver
     build:
