@@ -1,0 +1,1 @@
+This is a REST API based on the existing [forditasokk](https://github.com/horvathzsofi/forditasokk) repo (written in PHP).
