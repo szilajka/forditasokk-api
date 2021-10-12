@@ -9,9 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DEB7512D-F63
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthServer", "src\AuthServer\AuthServer.csproj", "{0B15C8F6-28E7-4005-B588-1AA18C072862}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forditasokk.Api", "src\Forditasokk.Api\Forditasokk.Api.csproj", "{F08F2647-F87D-411B-9C28-FBF1FA941E44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForditasokK.Api", "src\Forditasokk.Api\ForditasokK.Api.csproj", "{F08F2647-F87D-411B-9C28-FBF1FA941E44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forditasokk.Data", "src\Forditasokk.Data\Forditasokk.Data.csproj", "{742AD1CA-D9A2-4BC7-8624-6932B973554F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForditasokK.Data", "src\Forditasokk.Data\ForditasokK.Data.csproj", "{742AD1CA-D9A2-4BC7-8624-6932B973554F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForditasokK.Tests", "tests\ForditasokK.Tests\ForditasokK.Tests.csproj", "{F5E260E0-FF72-4CD5-9047-EE6A222D4B1F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{EB6F7EE6-96B1-4D62-9EAF-BB94D943217C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +75,18 @@ Global
 		{742AD1CA-D9A2-4BC7-8624-6932B973554F}.Release|x64.Build.0 = Release|Any CPU
 		{742AD1CA-D9A2-4BC7-8624-6932B973554F}.Release|x86.ActiveCfg = Release|Any CPU
 		{742AD1CA-D9A2-4BC7-8624-6932B973554F}.Release|x86.Build.0 = Release|Any CPU
+		{F5E260E0-FF72-4CD5-9047-EE6A222D4B1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5E260E0-FF72-4CD5-9047-EE6A222D4B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5E260E0-FF72-4CD5-9047-EE6A222D4B1F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F5E260E0-FF72-4CD5-9047-EE6A222D4B1F}.Debug|x64.Build.0 = Debug|Any CPU
+		{F5E260E0-FF72-4CD5-9047-EE6A222D4B1F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F5E260E0-FF72-4CD5-9047-EE6A222D4B1F}.Debug|x86.Build.0 = Debug|Any CPU
+		{F5E260E0-FF72-4CD5-9047-EE6A222D4B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5E260E0-FF72-4CD5-9047-EE6A222D4B1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5E260E0-FF72-4CD5-9047-EE6A222D4B1F}.Release|x64.ActiveCfg = Release|Any CPU
+		{F5E260E0-FF72-4CD5-9047-EE6A222D4B1F}.Release|x64.Build.0 = Release|Any CPU
+		{F5E260E0-FF72-4CD5-9047-EE6A222D4B1F}.Release|x86.ActiveCfg = Release|Any CPU
+		{F5E260E0-FF72-4CD5-9047-EE6A222D4B1F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,6 +95,7 @@ Global
 		{0B15C8F6-28E7-4005-B588-1AA18C072862} = {DEB7512D-F63A-464C-A2D4-AFDA8607B5D6}
 		{F08F2647-F87D-411B-9C28-FBF1FA941E44} = {DEB7512D-F63A-464C-A2D4-AFDA8607B5D6}
 		{742AD1CA-D9A2-4BC7-8624-6932B973554F} = {DEB7512D-F63A-464C-A2D4-AFDA8607B5D6}
+		{F5E260E0-FF72-4CD5-9047-EE6A222D4B1F} = {EB6F7EE6-96B1-4D62-9EAF-BB94D943217C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {372D46BD-024A-4F29-877A-2B8E288CE481}
