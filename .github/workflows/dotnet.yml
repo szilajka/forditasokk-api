@@ -18,11 +18,11 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore
-      working-directory: ./src/Forditasokk.Api/
+      run: dotnet restore ./Forditasokk.Api/
+      working-directory: ./src/
     - name: Build
-      run: dotnet build --no-restore
-      working-directory: ./src/Forditasokk.Api/
+      run: dotnet build ./Forditasokk.Api/ --no-restore
+      working-directory: ./src/
     - name: Test
-      run: dotnet test --no-build --verbosity normal
-      working-directory: ./tests/ForditasokK.Tests/
+      run: dotnet test ./ForditasokK.Tests/ --no-build --verbosity normal
+      working-directory: ./tests/
