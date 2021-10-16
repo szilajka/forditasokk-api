@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForditasokK.Api", "src\Ford
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForditasokK.Data", "src\Forditasokk.Data\ForditasokK.Data.csproj", "{742AD1CA-D9A2-4BC7-8624-6932B973554F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForditasokK.Tests", "tests\ForditasokK.Tests\ForditasokK.Tests.csproj", "{F5E260E0-FF72-4CD5-9047-EE6A222D4B1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForditasokK.Tests", "tests\ForditasokK.Tests\ForditasokK.Tests.csproj", "{F5E260E0-FF72-4CD5-9047-EE6A222D4B1F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{EB6F7EE6-96B1-4D62-9EAF-BB94D943217C}"
 EndProject
