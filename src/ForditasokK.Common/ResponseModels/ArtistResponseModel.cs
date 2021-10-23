@@ -1,16 +1,9 @@
-﻿using ForditasokK.Common.ResponseModels.Channels;
-using System;
+﻿using ForditasokK.Common.ResponseModels.BaseModels;
 
 namespace ForditasokK.Common.ResponseModels
 {
-    public class ArtistResponseModel : HistoryInformationsModel
+    public class ArtistResponseModel : ArtistBaseResponseModel
     {
-        public long Id { get; set; }
-        public string Name { get; set; }
-        public DateTime DebutDate { get; set; }
-        public byte[] ProfilePicture { get; set; }
-        public string FansName { get; set; }
-        public ArtistChannelResponseModel[] ArtistChannels { get; set; }
         public PublisherWithContractModel ActivePublisher { get; set; }
         public PublisherWithContractModel[] PastPublishers { get; set; }
         public AlbumResponseModel[] Albums { get; set; }
