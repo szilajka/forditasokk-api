@@ -1,11 +1,11 @@
-FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
 EXPOSE 88
 EXPOSE 44330
 
 ENV ASPNETCORE_URLS=https://+:44330;http://88
 
-FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["src/Forditasokk.Api/Forditasokk.Api.csproj", "src/Forditasokk.Api/"]
 RUN dotnet restore "src/Forditasokk.Api/Forditasokk.Api.csproj"
